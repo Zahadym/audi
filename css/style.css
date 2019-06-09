@@ -1,0 +1,1431 @@
+body {
+    margin: 0;
+    font-family: 'AudiEx';
+    background: #fff;
+    font-size: 15px;
+    color: #333;
+}
+
+*,
+*:after,
+*::before {
+    box-sizing: border-box;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    margin: 0;
+}
+
+
+@font-face {
+    font-family: 'Audi';
+    src: url('audi.eot?#iefix') format('embedded-opentype'),
+        url('audi.woff') format('woff'),
+        url('audi.ttf') format('truetype'),
+        url('audi.svg#AudiType-Normal') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: 'Audi';
+    src: url('audibold.eot?#iefix') format('embedded-opentype'),
+        url('audibold.woff') format('woff'),
+        url('audibold.ttf') format('truetype'),
+        url('audibold.svg#AudiType-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'AudiEx';
+    src: url('audiex.eot?#iefix') format('embedded-opentype'),
+        url('audiex.woff') format('woff'),
+        url('audiex.ttf') format('truetype'),
+        url('audiex.svg#AudiType-ExtendedNormal') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'AudiEx';
+    src: url('audiexbold.eot?#iefix') format('embedded-opentype'),
+        url('audiexbold.woff') format('woff'),
+        url('audiexbold.ttf') format('truetype'),
+        url('audiexbold.svg#AudiType-ExtendedBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+/* Container */
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1178px;
+    margin: 0 auto;
+}
+
+
+/* Intro */
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 90vh;
+
+    background: url("../img/intro.jpg") center no-repeat;
+    background-size: cover;
+}
+
+/* Header */
+
+.header__block {
+    display: flex;
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+.header__item {
+    width: 25%;
+    
+}
+
+.header__flex {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.block__flex {
+    display: flex;
+    position: relative;
+}
+
+.header__icon {
+    margin-right: 10px;
+    font-size: 0;
+    color: transparent;
+
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    transform: translateY(-50%);
+}
+
+.header__text {
+    margin-left: 25px;
+}
+
+.number {
+    font-family: 'AudiEX';
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.work__time {
+    font-family: 'Audi';
+    font-size: 12px;
+}
+
+.logo {
+    height: 39px;
+}
+
+.block__title {
+    color: #bb0a30;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.block__tit {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+
+/* Nav */
+
+.nav {
+
+    color: #fff;
+}
+
+.nav__link {
+    font-family: 'Audi';
+    display: inline-block;
+    vertical-align: top;
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    margin-right: 70px;
+
+    position: relative;
+    transition: opacity .2s linear;
+}
+
+.nav__link:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    opacity: 0;
+
+    background: #fff;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    transition: opacity .1s linear;
+}
+
+.nav__link:hover::after {
+    opacity: 1;
+}
+
+.bottom__nav {
+    background: #000;
+    padding: 19px 0;
+}
+
+/* Sales */
+
+
+h1 {
+    font-size: 36px;
+}
+
+.sales {
+    margin-top: 70px;
+    text-align: center;
+}
+
+.sales__title {
+    text-align: center;
+    margin-bottom: 50px;
+    color: #000;
+}
+
+.sales__suptitle {
+    max-width: 1550px;
+    margin-bottom: 70px;
+    font-family: 'Audi';
+    line-height: 1.7;
+    font-weight: bold;
+}
+
+.sales__car {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.hidden__car {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.sales__model__car {
+    margin: 30px 0;
+    position: relative;
+    width: 378px;
+    height: 485px;
+    background: #fff;
+
+    transition: background .2s linear;
+}
+
+.sales__model__car:hover .sales__a7 {
+    fill: #fff;
+}
+
+.sales__model__car:hover {
+    background: #f2f2f2;
+}
+
+.sales__model__car:hover .btn {
+    opacity: 1;
+}
+
+.sales__icon {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    z-index: 111;
+}
+
+
+.sales__background {
+    position: absolute;
+    top: 35px;
+    right: -30px;
+    z-index: 0;
+
+}
+
+
+.sales__a7 {
+    display: block;
+    height: 105px;
+    fill: #f2f2f2;
+    z-index: -1;
+
+    transition: fill .2s linear;
+}
+
+.sales__img {
+    position: relative;
+    margin-top: 50px;
+    z-index: 11;
+}
+
+.title__sales {
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-family: 'AudiEx';
+}
+
+.sup__title {
+    font-size: 18px;
+    color: #bb0a30;
+    margin-bottom: 10px;
+}
+
+.sup__title__icon {
+    margin: 0 0 -6px 5px;
+}
+
+.text__sales__icon {
+    margin: 0 0 -6px 5px;
+}
+
+.action__info {
+    display: none;
+    position: absolute;
+    top: 57px;
+    left: -8px;
+    z-index: 200000;
+    width: 300px;
+    height: 50px;
+    background-color: #000;
+    color: #d9d9d9;
+    font-family: 'Audi';
+    font-size: 12px;
+    font-weight: normal;
+    text-align: left;
+    line-height: 1.7;
+}
+
+.action__info p {
+    padding: 5px 0 0 10px;
+}
+
+.action__info:before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    opacity: 0;
+    transform: rotate(45deg);
+    background: #000;
+
+    position: absolute;
+    top: -2px;
+    left: 18px;
+    z-index: -1;
+    transition: opacity .1s linear;
+}
+
+.sales__icon_a:hover .action__info:before {
+    opacity: 1;
+}
+
+.sales__icon__action {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    z-index: 999;
+}
+
+.sales__icon_a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    float: left;
+}
+
+
+.sales__icon_a:hover .action__info {
+    display: block;
+}
+
+.action__sertif {
+    display: none;
+    position: absolute;
+    top: 57px;
+    left: 42px;
+    z-index: 200000;
+    width: 300px;
+    height: 50px;
+    background-color: #000;
+    color: #d9d9d9;
+    font-family: 'Audi';
+    font-size: 12px;
+    font-weight: normal;
+    text-align: left;
+    line-height: 1.7;
+}
+
+.sales__icon_b:hover .action__sertif {
+    display: block;
+}
+
+.action__sertif p {
+    padding: 5px 0 0 10px;
+}
+
+
+.action__sertif:before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    opacity: 0;
+    transform: rotate(45deg);
+    background: #000;
+
+    position: absolute;
+    top: -2px;
+    left: 18px;
+    z-index: -1;
+    transition: opacity .1s linear;
+}
+
+.sales__icon_b:hover .action__sertif:before {
+    opacity: 1;
+}
+
+
+
+.action__question {
+    display: none;
+    position: absolute;
+    top: 72px;
+    left: -30px;
+    z-index: 200000;
+    width: 300px;
+    height: 50px;
+    background-color: #000;
+    color: #d9d9d9;
+    font-family: 'Audi';
+    font-size: 12px;
+    font-weight: normal;
+    text-align: left;
+    line-height: 1.7;
+}
+
+.sales__icon__question:hover .action__question {
+    display: block;
+}
+
+.action__question p {
+    padding: 5px 0 0 10px;
+}
+
+.action__question:before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    opacity: 0;
+    transform: rotate(45deg);
+    background: #000;
+
+    position: absolute;
+    top: -2px;
+    right: 27px;
+    z-index: -1;
+    transition: opacity .1s linear;
+}
+
+.sales__icon__question:hover .action__question:before {
+    opacity: 1;
+}
+
+.action__question__text {
+    display: none;
+    position: absolute;
+    top: 102px;
+    left: -30px;
+    z-index: 200000;
+    width: 300px;
+    height: 50px;
+    background-color: #000;
+    color: #d9d9d9;
+    font-family: 'Audi';
+    font-size: 12px;
+    font-weight: normal;
+    text-align: left;
+    line-height: 1.7;
+}
+
+.text__icon__question:hover .action__question__text {
+    display: block;
+}
+
+.action__question__text p {
+    padding: 5px 0 0 10px;
+}
+
+.action__question__text:before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    opacity: 0;
+    transform: rotate(45deg);
+    background: #000;
+
+    position: absolute;
+    top: -2px;
+    right: 35px;
+    z-index: -1;
+    transition: opacity .1s linear;
+}
+
+.text__icon__question:hover .action__question__text:before {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+.text__sales {
+    font-size: 14px;
+    margin-bottom: 40px;
+    font-family: 'Audiex';
+    font-weight: normal;
+}
+
+.contant {
+    margin-left: 30px;
+    text-align: start;
+    position: relative;
+}
+
+.sales__item {
+    margin: 35px 0;
+}
+
+.sales__link {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    font-family: 'Audi';
+}
+
+/* btn */
+
+
+.btn {
+    margin-top: 25px;
+    display: inline-block;
+    vertical-align: top;
+    padding: 19px 90px;
+    border: 0;
+    border-radius: 2px;
+    cursor: pointer;
+
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 400;
+    text-decoration: none;
+    text-align: center;
+    background: #000;
+    font-family: 'Audi';
+    opacity: 0;
+
+    transition: opacity .2s linear;
+}
+
+
+/* Next */
+
+
+.next__btn {
+    margin: 55px;
+    text-align: center;
+}
+
+.next__link {
+    margin-right: 60px;
+    padding: 18px 92px;
+    text-decoration: none;
+    color: #000;
+    font-family: 'Audi';
+    border: 2px solid #000;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Best */
+
+.best {
+    margin-bottom: 60px;
+    position: relative;
+    color: #fff;
+}
+
+.best__img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.best__mini {    display: none;  }
+
+.best__title {
+    font-size: 36px;
+}
+
+.mg {
+    margin-bottom: 20px;
+}
+
+.best__contant {
+    padding: 120px 20px 0 40px;
+    width: 600px;
+    height: 601px;
+    background: #000;
+}
+
+.best__car {
+    display: block;
+    max-height: 100%;
+    width: auto;
+}
+
+.best__contant p {
+    font-family: 'Audi';
+
+}
+
+.best__do {
+    font-size: 20px;
+    font-weight: 100;
+    line-height: 1.5;
+    font-weight: 100;
+    color: #e5e5e5;
+}
+
+.best__text {
+    font-size: 16px;
+    padding: 30px 0 60px 0;
+    line-height: 1.7;
+    color: #e5e5e5;
+}
+
+
+.btn--best {
+    margin-top: 70px;
+    color: #e5e5e5;
+    border: 1px solid #e5e5e5;
+    padding: 15px 75px;
+    font-family: 'Audi';
+    font-weight: normal;
+
+    transition: background .1s linear, color .1s linear;
+}
+
+.btn--best:hover {
+    color: #000;
+    background: #fff;
+}
+
+hr {
+    display: block;
+    width: 100%;
+    height: 5px;
+    margin: 0;
+    border: 0;
+
+    background-color: #fff;
+}
+
+/* Map */
+
+.map {
+    width: 100%;
+    height: 700px;
+    position: relative;
+}
+
+.contacts {
+    position: absolute;
+    background-color: #fff;
+    top: 72px;
+    left: 100px;
+    z-index: 3;
+}
+
+.map__contacts {
+    padding: 50px 10px 5px 35px;
+    height: 557px;
+    width: 378px;
+}
+
+.map__title {
+    margin-bottom: 40px;
+}
+
+.map__number {
+    display: flex;
+    margin-bottom: 20px;
+    font-family: 'Audi';
+    font-weight: normal;
+}
+
+.map__icon {
+    padding: 0 15px 5px 5px;
+}
+
+
+.map__link {
+    margin: 0;
+    padding: 14px 80px;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Audi';
+    border: 2px solid #000;
+    font-weight: normal;
+    font-size: 16px;
+    background: #000;
+
+    transition: color .1s linear, background .1s linear;
+}
+
+.map__link:hover {
+    color: #000;
+    background: #fff;
+}
+
+.map__mg {
+    margin-top: 60px;
+}
+
+.add__mg {
+    margin-bottom: 10px;
+}
+
+.add__mgi {
+    margin-bottom: 30px;
+}
+
+.map__wrap {
+    flex-wrap: wrap;
+}
+
+.map__text {
+    font-family: 'Audi';
+    font-size: 16px;
+    font-weight: normal;
+}
+
+/* Footer */
+
+.footer {
+    background: #333333;
+    color: #cccccc;
+}
+
+.footer__top {
+    position: relative;
+    display: flex;
+    padding: 100px 0 20px 0;
+    border-bottom: 2px solid #4c4c4c;
+}
+
+.footer__tit {
+    color: #fff;
+}
+
+.footer__link {
+    color: #cccccc;
+}
+
+.footer__title {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0 40px;
+}
+
+.footer__text {
+    flex-direction: column;
+}
+
+.footer__text p {
+    padding-bottom: 30px;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.7;
+    font-family: 'Audi';
+}
+
+.footer__text p:last-child {
+    padding-bottom: 130px;
+}
+
+.nav__footer {
+    padding-top: 22px;
+    margin-right: 20px;
+}
+
+.header__footer {
+    width: 150px;
+}
+
+
+
+.social {
+    position: absolute;
+    top: 90px;
+    right: 0;
+    z-index: 1;
+    display: flex;
+}
+
+.social__item {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+}
+
+.social__icon {
+    justify-content: flex-end;
+    display: block;
+    height: 28px;
+    fill: #e5e5e5;
+
+    transition: fill .1s linear;
+}
+
+.social__item:hover .social__icon {
+    fill: #bb0a30;
+}
+
+
+
+/* JS */
+
+#hidden__car {
+    display: none;
+}
+#hidden__car.active {
+    display: flex;
+}
+
+
+
+/* form */
+
+
+
+
+
+
+
+
+.section__form {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 100vh;
+    background-color: #f2f2f2;
+    z-index: 999;
+    font-family: 'Audi';
+}
+
+#section__form {
+    display: none;
+}
+
+.container__form {
+    margin: 130px auto 10px;
+    height: 565px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-family: 'Audi';
+    text-align: center;
+    
+}
+
+.container__form h3 {
+    margin-bottom: 20px;
+    font-family: 'AudiEX';
+    color: #000;
+    font-size: 22px;
+}
+
+.container__form p {
+    color: #000;
+}
+
+.form__input {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 410px;
+    margin: 0 auto 20px;
+}
+
+.circle {
+    margin: 0 auto;
+    left: 230px;
+    top: -10px;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 40px;
+    background-color: #f2f2f2;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.circle__img {
+    border-radius: 50%;
+}
+
+
+.form {
+    border: none;
+    border-bottom: 1px solid #000;
+    margin-bottom: 30px;
+    padding-top: 30px;
+    background-color: #f2f2f2;
+}
+
+.form__label {
+    text-align: start;
+    color: #000;
+    opacity: .6;
+    margin-bottom: -30px;
+}
+
+
+.form__link {
+    text-decoration: none;
+    border: 1px solid #000;
+    padding: 17px 85px;
+    color :#fff;
+    background: #000;
+}
+
+.btn__form {
+    margin-top: 40px;
+}
+
+.check {
+    width: 450px;
+    text-align: start;
+    margin: 0 auto 30px auto;
+}
+
+
+.check__link {
+    color: #000;
+    font-weight: bold;
+}
+
+.check__text {
+    font-size: 22px;
+}
+
+
+
+
+
+/* Placeholder */
+
+input {
+    outline:none;
+    font-size:25px;
+    font-weight: normal;
+}
+
+.form::-webkit-input-placeholder {
+    font-size: 22px;
+  }
+  
+  .form:-moz-placeholder {
+    font-size: 22px;
+  }
+  
+  .form::-moz-placeholder {
+    font-size: 22px;
+  }
+  
+  .form:-ms-input-placeholder {
+    font-size: 22px;
+  }
+
+
+
+  .form2::-webkit-input-placeholder {
+    font-size: 22px;
+  }
+
+
+
+
+
+/* Check box */ 
+
+input[type="checkbox"]:checked, 
+input[type="checkbox"]:not(:checked), 
+input[type="radio"]:checked, 
+input[type="radio"]:not(:checked) 
+{
+    position: absolute;
+    left: -9999px;
+}
+
+input[type="checkbox"]:checked + label, 
+input[type="checkbox"]:not(:checked) + label, 
+input[type="radio"]:checked + label, 
+input[type="radio"]:not(:checked) + label {
+    display: inline-block;
+    position: relative;
+    padding-left: 28px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+input[type="checkbox"]:checked + label:before, 
+input[type="checkbox"]:not(:checked) + label:before,
+input[type="radio"]:checked + label:before, 
+input[type="radio"]:not(:checked) + label:before {
+    content: "";
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #999999;
+    background-color: #f2f2f2;
+}
+
+input[type="checkbox"]:checked + label:before, 
+input[type="checkbox"]:not(:checked) + label:before {
+    border-radius: 2px;
+}
+
+input[type="radio"]:checked + label:before, 
+input[type="radio"]:not(:checked) + label:before {
+    border-radius: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+input[type="checkbox"]:checked + label:after, 
+input[type="checkbox"]:not(:checked) + label:after, 
+input[type="radio"]:checked + label:after, 
+input[type="radio"]:not(:checked) + label:after {
+    content: "";
+    position: absolute;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+input[type="checkbox"]:checked + label:after, 
+input[type="checkbox"]:not(:checked) + label:after {
+    left: 3px;
+    top: 4px;
+    width: 10px;
+    height: 5px;
+    border-radius: 1px;
+    border-left: 3px solid #000;
+    border-bottom: 3px solid #000;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+input[type="radio"]:checked + label:after, 
+input[type="radio"]:not(:checked) + label:after {
+    left: 5px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+input[type="checkbox"]:not(:checked) + label:after, 
+input[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+}
+
+input[type="checkbox"]:checked + label:after, 
+input[type="radio"]:checked + label:after {
+    opacity: 1;
+}
+
+
+
+
+
+/* Media */
+
+@media (max-width: 1230px) {
+
+    .container {
+        width: 740px;
+        
+    }
+
+    .header {    display: none;  }
+
+    .header__opacity {
+        display: none;
+    }
+
+    .header__mob__num {
+        width: 40%;
+    }
+
+    .header__flex {
+        right: 30px;
+    }
+
+    .intro {
+        background: url(../img/mini.jpg) center no-repeat;
+        background-size: cover;
+        height: 400px;
+        width: 100%;
+        margin: 0 auto 20px;
+    }
+
+    .sales__model__car .sales__a7 {
+        fill: #fff;
+    }
+
+    .sales__model__car {
+        width: 360px;
+        background: #f2f2f2;
+        margin: 5px 5px;
+    }
+
+    .btn {
+        opacity: 1;
+        background: #fff;
+        color: #000;
+        padding: 19px 85px;
+    }
+
+    .sales__title {
+        margin: 90px 0 60px 0;
+
+    }
+
+    .best {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .best__mini {
+        display: block;
+        width: 100%;
+    }
+    .best__car {    display: none;  }
+
+    .best__img {
+        position: relative;
+        order: 1;
+    }
+
+    .best__title {
+        font-size: 22px;
+    }
+
+    .best__contant {
+        position: relative;
+        order: 2;
+        width: 100%;
+        padding: 40px 20px 0 60px;
+        height: 450px;
+    }
+
+    .contacts {
+        left: 0px;
+    }
+
+    .footer__top {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .social {
+        position: relative;
+        top: 0;
+        margin: 50px 20px 40px;
+    }
+
+    .header__footer {
+        margin-bottom: 20px;
+    }
+
+    .contacts {
+        margin-left: 20px;
+    }
+
+    .footer__title {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0 40px;
+    }
+
+    .footer__link {
+        margin-top: 40px;
+    }
+
+    .footer__top {
+        padding: 100px 0 20px 30px;
+    }
+    .footer__block {
+        padding: 0 30px;
+    }
+}
+
+@media (max-width: 768px) {
+
+
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container {
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    .best_title {
+        font-size: 11px;
+    }
+
+    .next__btn {
+        margin: 50px auto;
+    }
+
+    .next__link {
+        padding: 18px 40px;
+        margin-right: 0;
+        border: 1px solid #000;
+    }
+
+    .header__opacity {
+        display: none;
+    }
+
+    .header__block {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .header__item {
+        position: relative;
+        width: 200px;
+    }
+
+    .header__icon, .work__time {
+        display: none;
+    }
+
+    .header__text {
+        margin: 10px 0 0 0;
+    }
+
+    .header__flex {
+        right: 0;
+    }
+
+    .intro {
+        background: url(../img/mini.jpg) center no-repeat;
+        background-size: cover;
+        height: 200px;
+        width: 100%;
+        margin: 0 auto 20px;
+    }
+
+    .btn {
+        padding: 19px 60px;
+    }
+  
+
+    .sales {
+        margin-top: 0;
+        text-align: start;
+    }
+    .sales__title {
+        margin: 0 0 10px;
+        text-align: start;
+        font-size: 24px;
+        padding: 0 10px;
+    }
+
+    .sales__suptitle {
+        padding: 0 10px;
+        margin-bottom: 20px;
+    }
+
+    .sales__icon {
+        top: 15px;
+        left: 15px;
+    }
+
+    .contant {
+        margin-left: 15px;
+    }
+
+    .best__contant {
+        padding: 40px 20px 0 40px;
+        height: 580px;
+    }
+
+    .best {
+        margin-bottom: 0;
+    }
+
+    .btn--best {
+        border-color: #fff;
+    }
+
+    .map {
+        height: 400px;
+    }
+
+    .map__link {
+        padding: 14px 50px;
+    }
+
+    .contacts {
+        margin-left: 0px;
+    }
+
+    .contacts {
+        top: -557px;
+        background-color: #f2f2f2;
+        position: static;
+    }
+
+    .div__map {
+        height: 10px;
+    }
+
+    .footer__top {
+        padding: 100px 0 20px 10px;
+    }
+
+    .container__form {
+        width: 290px;
+        margin: 50px auto 10px;
+    }
+
+    .media__div {
+        width: 290px;
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .form__input {
+        width: 290px;
+    }
+
+    .check {
+        width: 290px;
+    }
+
+    .form__link {
+        padding: 17px 60px;
+    }
+
+    .section__form {
+        height: 100%;
+    }
+
+    .circle {
+        left: 140px;
+    }
+
+    .map__contacts{
+        width: 100%;
+    }
+
+    .form {
+        width: 290px;
+    }
+}
+

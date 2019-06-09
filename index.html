@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/script.js?1111"></script>
+    <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyBLQrLj8e2WVVdUaykDlfX9LKUMa7wdCCc"></script>
+    <title>AUDI</title>
+</head>
+
+<body>
+
+    <!-- form -->
+
+    <section class="section__form" id="section__form">
+        <div class="container__form">
+            <div class="media__div">
+                <div class="circle"><img class="circle__img" onclick="off()" src="img/form.jpg" alt="" /></div>
+                <h3>Заявка на автомобиль</h3>
+                <p>Отправьте заявку и мы перезвоним вам для уточнения деталей:</p>
+
+                <div class="form__input">
+                    <input class="form" type="text" placeholder="Имя" valign='top'>
+                    <label for="name" class="form__label">Телефон</label>
+                    <input class="form form2" type="text" placeholder="+7 999 999-99-99">
+                </div>
+                <div class="check">
+                    <input type="checkbox" id="cb1"> <label for="cb1">Согласен на <a class="check__link"
+                            href="">обработку
+                            персональных данных</a></label>
+                </div>
+                <div class="check">
+                    <input type="checkbox" id="cb2"> <label for="cb2">Согласие на <a class="check__link"
+                            href="">получение
+                            рекламной информации от Audi</a></label>
+                </div>
+                <div class="btn__form">
+                    <a class="form__link" href="#">Отправить заявку</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <!-- Sprite -->
+    <svg style="display: none">
+        <symbol id="a7" viewBox="0 0 303 157">
+            <g>
+                <path
+                    d="M0 123.08L64.6 0h28.56l64.6 123.08h-30.77l-13.26-25.5H43.52l-13.09 25.5H0zm78.71-96.56L53.72 76.33h49.98L78.71 26.52zm102.2 96.56l63.58-103.02h-77.35V0h107.78v17.85l-65.28 105.23h-28.73z" />
+            </g>
+        </symbol>
+
+        <symbol id="facebook" viewBox="0 0 430.113 430.114">
+            <g>
+                <path
+                    d="M158.081,83.3c0,10.839,0,59.218,0,59.218h-43.385v72.412h43.385v215.183h89.122V214.936h59.805
+                    c0,0,5.601-34.721,8.316-72.685c-7.784,0-67.784,0-67.784,0s0-42.127,0-49.511c0-7.4,9.717-17.354,19.321-17.354
+                    c9.586,0,29.818,0,48.557,0c0-9.859,0-43.924,0-75.385c-25.016,0-53.476,0-66.021,0C155.878-0.004,158.081,72.48,158.081,83.3z" />
+            </g>
+        </symbol>
+
+        <symbol id="insta" viewBox="0 0 169.063 169.063">
+            <g>
+                <path d="M122.406,0H46.654C20.929,0,0,20.93,0,46.655v75.752c0,25.726,20.929,46.655,46.654,46.655h75.752
+		c25.727,0,46.656-20.93,46.656-46.655V46.655C169.063,20.93,148.133,0,122.406,0z M154.063,122.407
+		c0,17.455-14.201,31.655-31.656,31.655H46.654C29.2,154.063,15,139.862,15,122.407V46.655C15,29.201,29.2,15,46.654,15h75.752
+		c17.455,0,31.656,14.201,31.656,31.655V122.407z" />
+                <path d="M84.531,40.97c-24.021,0-43.563,19.542-43.563,43.563c0,24.02,19.542,43.561,43.563,43.561s43.563-19.541,43.563-43.561
+		C128.094,60.512,108.552,40.97,84.531,40.97z M84.531,113.093c-15.749,0-28.563-12.812-28.563-28.561
+		c0-15.75,12.813-28.563,28.563-28.563s28.563,12.813,28.563,28.563C113.094,100.281,100.28,113.093,84.531,113.093z" />
+                <path d="M129.921,28.251c-2.89,0-5.729,1.17-7.77,3.22c-2.051,2.04-3.23,4.88-3.23,7.78c0,2.891,1.18,5.73,3.23,7.78
+		c2.04,2.04,4.88,3.22,7.77,3.22c2.9,0,5.73-1.18,7.78-3.22c2.05-2.05,3.22-4.89,3.22-7.78c0-2.9-1.17-5.74-3.22-7.78
+		C135.661,29.421,132.821,28.251,129.921,28.251z" />
+            </g>
+        </symbol>
+
+        <symbol id="youtube" viewBox="0 0 512 512">
+            <g>
+                <path d="M490.24,113.92c-13.888-24.704-28.96-29.248-59.648-30.976C399.936,80.864,322.848,80,256.064,80
+                        c-66.912,0-144.032,0.864-174.656,2.912c-30.624,1.76-45.728,6.272-59.744,31.008C7.36,138.592,0,181.088,0,255.904
+                        C0,255.968,0,256,0,256c0,0.064,0,0.096,0,0.096v0.064c0,74.496,7.36,117.312,21.664,141.728
+                        c14.016,24.704,29.088,29.184,59.712,31.264C112.032,430.944,189.152,432,256.064,432c66.784,0,143.872-1.056,174.56-2.816
+                        c30.688-2.08,45.76-6.56,59.648-31.264C504.704,373.504,512,330.688,512,256.192c0,0,0-0.096,0-0.16c0,0,0-0.064,0-0.096
+                        C512,181.088,504.704,138.592,490.24,113.92z M192,352V160l160,96L192,352z" />
+            </g>
+        </symbol>
+    </svg>
+
+    <div class="header__top">
+        <div class="container">
+            <div class="header__block">
+                <div class="header__item">
+                    <p class="block__title">Ауди</p>
+                    <p class="block__tit">Центр Город</p>
+                </div>
+                <div class="header__item header__mob__num">
+                    <div class="block__flex">
+                        <img class="header__icon" src="img/icon-1.jpg" height="22px" alt="icon" />
+                        <div class="header__text">
+                            <p class="work__time">с 9:00 до 20:00</p>
+                            <p class="number">+7 999 999-99-99</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__item header__opacity">
+                    <div class="block__flex">
+                        <img class="header__icon" src="img/icon-2.jpg" height="22px" alt="icon">
+                        <div class="header__text">
+                            <p class="work__time">Адрес дилерского центра</p>
+                            <p class="number">Обручева, 30/1, ст2</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="header__flex">
+                <img class="logo" src="img/logo-1.jpg" alt="logo">
+            </div>
+        </div>
+    </div>
+
+    <!-- Intro -->
+    <div class="intro">
+
+    </div>
+
+
+    <header class="header">
+
+        <div class="bottom__nav">
+            <div class="container">
+
+                <nav class="nav">
+                    <a class="nav__link" href="#">Обзор</a>
+                    <a class="nav__link" href="#">Модели в наличии</a>
+                    <a class="nav__link" href="#">Спец предложения</a>
+                    <a class="nav__link" href="#">Контакты</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <div class="sales">
+                <h1 class="sales__title">Лучшие предложения в Ауди Центр Город</h1>
+                <div class="sales__suptitle">
+                    <p>Воспользуйтесь безупречными предложениями на весь модельный ряд от Audiмании. 68 Audi на
+                        специальных условиях. Решайтесь пока есть выбор.</p>
+                </div>
+                <div class="sales__car">
+                    <div class="sales__model__car">
+                        <div class="sales__icon">
+                            <a href="javascript://" class="sales__icon_a">
+                                <img class="sales__icon__action" src="img/action.png" alt="">
+                                <div class="action__info">
+                                    <p>Защитная пленка на капот и охранный комплекс в подарок</p>
+                                </div>
+                            </a>
+                            <a href="javascript://" class="sales__icon_b">
+                                <img class="sales__icon__action" src="img/sertif.png" height="50px" width="50px" alt="">
+                                <div class="action__sertif">
+                                    <p>Защитная пленка на капот и охранный комплекс в подарок</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="sales__background">
+                            <svg class="sales__a7">
+                                <use xlink:href="#a7"></use>
+                            </svg>
+                        </div>
+                        <img class="sales__img" src="img/car-1.png" width="290px" alt="car">
+                        <div class="contant">
+                            <h4 class="title__sales">Audi A7 Sportback</h4>
+                            <h5 class="sup__title"> от 4 165 280 руб.
+                                <a href="javascript://" class="sales__icon__question">
+                                    <img class="sup__title__icon" src="img/question.png" alt="" width="26px"
+                                        height="26px">
+                                    <div class="action__question">
+                                        <p>Цена указана с учетом сдачи автомобиля Audi возрастом до 5 лет в трейд-ин</p>
+                                    </div>
+                                </a>
+                            </h5>
+
+                            <b class="text__sales">В кредит от 32 435 руб
+                                <a href="javascript://" class="text__icon__question">
+                                    <img class="text__sales__icon" src="img/question.png" alt="" width="18px"
+                                        height="18px">
+                                    <div class="action__question__text">
+                                        <p>Цена указана с учетом сдачи автомобиля Audi возрастом до 5 лет в трейд-ин</p>
+                                    </div>
+                                </a>
+                            </b>
+                            <div class="sales__item"></div>
+                            <p><a class="sales__link" href="#">Узнать подробнее ></a></p>
+                            <a class="btn btn--red" href="#">Отправить заявку</a>
+                        </div>
+                    </div>
+
+                    <div class="sales__model__car">
+                        <div class="sales__icon">
+
+                            <img src="img/sertif.png" height="50px" width="50px" alt="">
+                        </div>
+                        <div class="sales__background">
+                            <svg class="sales__a7">
+                                <use xlink:href="#a7"></use>
+                            </svg>
+                        </div>
+                        <img class="sales__img" src="img/car-1.png" width="290px" alt="car">
+                        <div class="contant">
+                            <h4 class="title__sales">Audi A7 Sportback</h4>
+                            <h5 class="sup__title"> от 4 165 280 руб. <img class="sup__title__icon"
+                                    src="img/question.png" alt="" width="26px" height="26px"></h5>
+                            <b class="text__sales">В кредит от 32 435 руб <img class="text__sales__icon"
+                                    src="img/question.png" alt="" width="18px" height="18px"></b>
+                            <div class="sales__item"></div>
+                            <p><a class="sales__link" href="#">Узнать подробнее ></a></p>
+                            <a class="btn btn--red" href="#">Отправить заявку</a>
+                        </div>
+                    </div>
+
+                    <div class="sales__model__car">
+                        <div class="sales__background">
+                            <svg class="sales__a7">
+                                <use xlink:href="#a7"></use>
+                            </svg>
+                        </div>
+                        <img class="sales__img" src="img/car-1.png" width="290px" alt="car">
+                        <div class="contant">
+                            <h4 class="title__sales">Audi A7 Sportback</h4>
+                            <h5 class="sup__title"> от 4 165 280 руб. <img class="sup__title__icon"
+                                    src="img/question.png" alt="" width="26px" height="26px"></h5>
+                            <b class="text__sales">В кредит от 32 435 руб <img class="text__sales__icon"
+                                    src="img/question.png" alt="" width="18px" height="18px"></b>
+                            <div class="sales__item"></div>
+                            <p><a class="sales__link" href="#">Узнать подробнее ></a></p>
+                            <a class="btn btn--red" href="#">Отправить заявку</a>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="sales__model__car">
+                        <div class="sales__background">
+                            <svg class="sales__a7">
+                                <use xlink:href="#a7"></use>
+                            </svg>
+                        </div>
+                        <img class="sales__img" src="img/car-1.png" width="290px" alt="car">
+                        <div class="contant">
+                            <h4 class="title__sales">Audi A7 Sportback</h4>
+                            <h5 class="sup__title"> от 4 165 280 руб. <img class="sup__title__icon"
+                                    src="img/question.png" alt="" width="26px" height="26px"></h5>
+                            <b class="text__sales">В кредит от 32 435 руб <img class="text__sales__icon"
+                                    src="img/question.png" alt="" width="18px" height="18px"></b>
+                            <div class="sales__item"></div>
+                            <p><a class="sales__link" href="#">Узнать подробнее ></a></p>
+                            <a class="btn" href="#">Отправить заявку</a>
+                        </div>
+                    </div>
+
+                    <div class="sales__model__car">
+                        <div class="sales__background">
+                            <svg class="sales__a7">
+                                <use xlink:href="#a7"></use>
+                            </svg>
+                        </div>
+                        <img class="sales__img" src="img/car-1.png" width="290px" alt="car">
+                        <div class="contant">
+                            <h4 class="title__sales">Audi A7 Sportback</h4>
+                            <h5 class="sup__title"> от 4 165 280 руб. <img class="sup__title__icon"
+                                    src="img/question.png" alt="" width="26px" height="26px"></h5>
+                            <b class="text__sales">В кредит от 32 435 руб <img class="text__sales__icon"
+                                    src="img/question.png" alt="" width="18px" height="18px"></b>
+                            <div class="sales__item"></div>
+                            <p><a class="sales__link" href="#">Узнать подробнее ></a></p>
+                            <a class="btn btn--red" href="#">Отправить заявку</a>
+                        </div>
+                    </div>
+
+                    <div class="sales__model__car">
+                        <div class="sales__background">
+                            <svg class="sales__a7">
+                                <use xlink:href="#a7"></use>
+                            </svg>
+                        </div>
+                        <img class="sales__img" src="img/car-1.png" width="290px" alt="car">
+                        <div class="contant">
+                            <h4 class="title__sales">Audi A7 Sportback</h4>
+                            <h5 class="sup__title"> от 4 165 280 руб. <img class="sup__title__icon"
+                                    src="img/question.png" alt="" width="26px" height="26px"></h5>
+                            <b class="text__sales">В кредит от 32 435 руб <img class="text__sales__icon"
+                                    src="img/question.png" alt="" width="18px" height="18px"></b>
+                            <div class="sales__item"></div>
+                            <p><a class="sales__link" href="#">Узнать подробнее ></a></p>
+                            <a class="btn btn--red" href="#">Отправить заявку</a>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="hidden__car" id="hidden__car">
+                        <div class="sales__model__car">
+                            <div class="sales__background">
+                                <svg class="sales__a7">
+                                    <use xlink:href="#a7"></use>
+                                </svg>
+                            </div>
+                            <img class="sales__img" src="img/car-1.png" width="290px" alt="car">
+                            <div class="contant">
+                                <h4 class="title__sales">Audi A7 Sportback</h4>
+                                <h5 class="sup__title"> от 4 165 280 руб. <img class="sup__title__icon"
+                                        src="img/question.png" alt="" width="26px" height="26px"></h5>
+                                <b class="text__sales">В кредит от 32 435 руб <img class="text__sales__icon"
+                                        src="img/question.png" alt="" width="18px" height="18px"></b>
+                                <div class="sales__item"></div>
+                                <p><a class="sales__link" href="#">Узнать подробнее ></a></p>
+                                <a class="btn btn--red" href="#">Отправить заявку</a>
+                            </div>
+                        </div>
+
+                        <div class="sales__model__car">
+                            <div class="sales__background">
+                                <svg class="sales__a7">
+                                    <use xlink:href="#a7"></use>
+                                </svg>
+                            </div>
+                            <img class="sales__img" src="img/car-1.png" width="290px" alt="car">
+                            <div class="contant">
+                                <h4 class="title__sales">Audi A7 Sportback</h4>
+                                <h5 class="sup__title"> от 4 165 280 руб. <img class="sup__title__icon"
+                                        src="img/question.png" alt="" width="26px" height="26px"></h5>
+                                <b class="text__sales">В кредит от 32 435 руб <img class="text__sales__icon"
+                                        src="img/question.png" alt="" width="18px" height="18px"></b>
+                                <div class="sales__item"></div>
+                                <p><a class="sales__link" href="#">Узнать подробнее ></a></p>
+                                <a class="btn btn--red" href="#">Отправить заявку</a>
+                            </div>
+                        </div>
+
+                        <div class="sales__model__car">
+                            <div class="sales__background">
+                                <svg class="sales__a7">
+                                    <use xlink:href="#a7"></use>
+                                </svg>
+                            </div>
+                            <img class="sales__img" src="img/car-1.png" width="290px" alt="car">
+                            <div class="contant">
+                                <h4 class="title__sales">Audi A7 Sportback</h4>
+                                <h5 class="sup__title"> от 4 165 280 руб. <img class="sup__title__icon"
+                                        src="img/question.png" alt="" width="26px" height="26px"></h5>
+                                <b class="text__sales">В кредит от 32 435 руб <img class="text__sales__icon"
+                                        src="img/question.png" alt="" width="18px" height="18px"></b>
+                                <div class="sales__item"></div>
+                                <p><a class="sales__link" href="#">Узнать подробнее ></a></p>
+                                <a class="btn btn--red" href="#">Отправить заявку</a>
+                            </div>
+                        </div>
+
+
+
+                        <div class="sales__model__car">
+                            <div class="sales__background">
+                                <svg class="sales__a7">
+                                    <use xlink:href="#a7"></use>
+                                </svg>
+                            </div>
+                            <img class="sales__img" src="img/car-1.png" width="290px" alt="car">
+                            <div class="contant">
+                                <h4 class="title__sales">Audi A7 Sportback</h4>
+                                <h5 class="sup__title"> от 4 165 280 руб. <img class="sup__title__icon"
+                                        src="img/question.png" alt="" width="26px" height="26px"></h5>
+                                <b class="text__sales">В кредит от 32 435 руб <img class="text__sales__icon"
+                                        src="img/question.png" alt="" width="18px" height="18px"></b>
+                                <div class="sales__item"></div>
+                                <p><a class="sales__link" href="#">Узнать подробнее ></a></p>
+                                <a class="btn" href="#">Отправить заявку</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="next__btn">
+                    <a href="javascript://" class="next__link" id="next-link-id">Посмотреть еще 10 из 16</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h1 class="sales__title">Лучшие предложения в Ауди Центр Город</h1>
+            <div class="best">
+                <div class="best__contant">
+                    <h4 class="best__title">Ваш новый Audi</h4>
+                    <h4 class="best__title mg"> в кредит под 7% в год</h4>
+                    <p class="best__do">Получите эксклюзивное преимущество</p>
+                    <p class="best__do">до 400 000 руб.*</p>
+                    <p class="best__text">Здесь моджет распологаться какой-то дополнительный текст, который может
+                        рассказать об акциях и возможностях, которые может получить покупатель при оформлении.</p>
+                    <a class="next__link btn--best callback">Отправить заявку</a>
+                </div>
+                <div class="best__img">
+                    <img class="best__car" src="img/best-1.jpg" alt="car">
+                    <img class="best__mini" src="img/best-mini.jpg" alt="car">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <div class="container">
+        <div class="contacts">
+            <div class="map__contacts">
+                <div class="map__title">
+                    <h2>Ауди</h2>
+                    <h2>Центр Город</h2>
+                </div>
+                <div class="map__number">
+                    <img class="map__icon" src="img/icon-1.jpg" alt="icon">
+                    <p class="map__text">+7 999 999-99-99</p>
+                </div>
+                <div class="map__number">
+                    <img class="map__icon add__mgi" src="img/icon-2.jpg" alt="icon">
+                    <p class="map__text">Обручева, 30/1, ст2</p>
+                </div>
+
+                <div class="map__btn">
+                    <a class="map__link" href="#">Заказать звонок</a>
+                </div>
+                <div class="map__number map__mg">
+                    <img class="map__icon" src="img/icon-3.jpg" height="20px" alt="icon">
+                    <p class="map__text">info@audi-center.ru</p>
+                </div>
+                <div class="map__number">
+                    <img class="map__icon map__wrap" src="img/icon-4.jpg" height="24px" alt="icon">
+                    <div class="map__wrap">
+                        <p class="map__text add__mg">Пн-Чт: С 8:00 до 22:00</p>
+                        <p class="map__text add__mg">Пт: С 7:00 до 21:00</p>
+                        <p class="map__text add__mg">Вс: С 9:00 до 18:00</p>
+                    </div>
+                </div>
+                <div class="map__number">
+                    <img class="map__icon" src="img/icon-5.jpg" alt="icon">
+                    <p class="map__text">www.audi-center.ru</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="map" class="map"></div>
+    <script type="text/javascript">
+        /**
+         * Отображение google maps
+         */
+
+        function initMap() {
+            // var centerLatLng = new google.maps.LatLng(44.2156276, 43.0776651);
+            var centerLatLng = new google.maps.LatLng(44.2156276, 43.0776651);
+            var mapOptions = {
+                center: centerLatLng,
+                disableDefaultUI: true,
+                zoom: 15,
+                gestureHandling: false,
+                styles: [{
+                        "featureType": "water",
+                        "elementType": "geometry.fill",
+                        "stylers": [{
+                            "color": "#d3d3d3"
+                        }]
+                    },
+                    {
+                        "featureType": "transit",
+                        "stylers": [{
+                                "color": "#808080"
+                            },
+                            {
+                                "visibility": "off"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.highway",
+                        "elementType": "geometry.stroke",
+                        "stylers": [{
+                                "visibility": "on"
+                            },
+                            {
+                                "color": "#b3b3b3"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.highway",
+                        "elementType": "geometry.fill",
+                        "stylers": [{
+                            "color": "#ffffff"
+                        }]
+                    },
+                    {
+                        "featureType": "road.local",
+                        "elementType": "geometry.fill",
+                        "stylers": [{
+                                "visibility": "on"
+                            },
+                            {
+                                "color": "#ffffff"
+                            },
+                            {
+                                "weight": 1.8
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.local",
+                        "elementType": "geometry.stroke",
+                        "stylers": [{
+                            "color": "#d7d7d7"
+                        }]
+                    },
+                    {
+                        "featureType": "poi",
+                        "elementType": "geometry.fill",
+                        "stylers": [{
+                                "visibility": "on"
+                            },
+                            {
+                                "color": "#ebebeb"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "administrative",
+                        "elementType": "geometry",
+                        "stylers": [{
+                            "color": "#a7a7a7"
+                        }]
+                    },
+                    {
+                        "featureType": "road.arterial",
+                        "elementType": "geometry.fill",
+                        "stylers": [{
+                            "color": "#ffffff"
+                        }]
+                    },
+                    {
+                        "featureType": "road.arterial",
+                        "elementType": "geometry.fill",
+                        "stylers": [{
+                            "color": "#ffffff"
+                        }]
+                    },
+                    {
+                        "featureType": "landscape",
+                        "elementType": "geometry.fill",
+                        "stylers": [{
+                                "visibility": "on"
+                            },
+                            {
+                                "color": "#efefef"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road",
+                        "elementType": "labels.text.fill",
+                        "stylers": [{
+                            "color": "#696969"
+                        }]
+                    },
+                    {
+                        "featureType": "administrative",
+                        "elementType": "labels.text.fill",
+                        "stylers": [{
+                                "visibility": "on"
+                            },
+                            {
+                                "color": "#737373"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "poi",
+                        "elementType": "labels.icon",
+                        "stylers": [{
+                            "visibility": "off"
+                        }]
+                    },
+                    {
+                        "featureType": "poi",
+                        "elementType": "labels",
+                        "stylers": [{
+                            "visibility": "off"
+                        }]
+                    },
+                    {
+                        "featureType": "road.arterial",
+                        "elementType": "geometry.stroke",
+                        "stylers": [{
+                            "color": "#d6d6d6"
+                        }]
+                    },
+                    {
+                        "featureType": "road",
+                        "elementType": "labels.icon",
+                        "stylers": [{
+                            "visibility": "off"
+                        }]
+                    },
+                    {},
+                    {
+                        "featureType": "poi",
+                        "elementType": "geometry.fill",
+                        "stylers": [{
+                            "color": "#dadada"
+                        }]
+                    }
+                ]
+
+            };
+            var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+            marker = new google.maps.Marker({
+                position: centerLatLng,
+                map: map,
+                animation: google.maps.Animation.DROP,
+                title: "Hello World!"
+            });
+
+            var contentString = '<div id="content">' +
+                '<div id="siteNotice">' +
+                '</div>' +
+                '<h3 id="firstHeading" class="firstHeading">Ауди Cервис Минеральные Воды</h3>' +
+                '<div id="bodyContent">' +
+                '<p><p>Автодорога Кавказ, 347 километр. </p><p>357200 Минеральные Воды</p></p>' +
+                '</div>' +
+                '</div>';
+
+            infowindow = new google.maps.InfoWindow({
+                content: contentString
+            });
+
+            function toggleBounce() {
+                if (marker.getAnimation() != null) {
+                    marker.setAnimation(null);
+                } else {
+                    marker.setAnimation(google.maps.Animation.BOUNCE);
+                }
+            }
+
+            google.maps.event.addListener(marker, 'click', function () {
+                toggleBounce();
+                infowindow.open(map, marker);
+                setTimeout(toggleBounce, 1500);
+            });
+
+        }
+        google.maps.event.addDomListener(window, "load", initMap);
+    </script>
+
+    <hr>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="header__item header__footer">
+                    <p class="block__title">Ауди</p>
+                    <p class="footer__tit">Центр Город</p>
+                </div>
+                <nav class="nav">
+
+                    <a class="nav__link  nav__footer" href="#">О нас</a>
+                    <a class="nav__link nav__footer" href="#">Новые автомобили</a>
+                    <a class="nav__link nav__footer" href="#">С пробегом</a>
+                    <a class="nav__link nav__footer" href="#">Акции</a>
+                    <a class="nav__link nav__footer" href="#">Сервис и запасные части</a>
+                    <a class="nav__link nav__footer" href="#">Новости</a>
+                </nav>
+                <div class="footer__social">
+                    <div class="social">
+                        <div class="social__item">
+                            <a class="social__item" href="#" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#facebook"></use>
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div class="social__item">
+                            <a class="social__item" href="#" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#insta"></use>
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div class="social__item">
+                            <a class="social__item" href="#" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#youtube"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer__block">
+                <div class="footer__title">
+                    <p>© 2019. Ауди Центр Город. Все права защищены</p>
+                    <a class="footer__link" href="#">Политика конфеденциальности</a>
+                </div>
+                <div class="footer__text">
+                    <p>1. Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Над
+                        заголовок вершину гор, предложения, вопрос своего за большого запятых рукописи толку семантика
+                        моей! Если запятой имени текст путь своих?</p>
+                    <p>2. Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Продолжил
+                        дал использовало семь lorem встретил речью рукописи вдали. Наш страну грустный диких алфавит
+                        родного коварный осталось ведущими предупреждал всемогущая?Образ путь коварный страну свою
+                        города одна раз жизни своего рукопись предупредила букв рыбного снова океана, даль страна дал
+                        всеми, несколько взобравшись домах вдали курсивных! Речью инициал реторический журчит гор?</p>
+                    <p>3. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni laboriosam minima quam quaerat
+                        aliquid veniam? Adipisci qui aut blanditiis amet sunt, sequi eveniet provident, maiores cum
+                        dolorum assumenda nostrum voluptate.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat temporibus mollitia ipsa culpa
+                        minima officiis maxime provident, fuga, suscipit repellat sint doloribus ex soluta accusamus nam
+                        laboriosam, esse et velit?</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+
+</html>
